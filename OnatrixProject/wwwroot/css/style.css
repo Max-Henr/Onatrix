@@ -38,7 +38,11 @@
     padding: 20px 0 20px 0;
     box-sizing: border-box;
 }
+
+
 /* header styles */
+
+
 .top-banner {
     background-color: var(--primary-color);
 }
@@ -64,7 +68,6 @@
     cursor: pointer;
     display: flex;
     align-items: stretch;
-    /* gap: 1.5rem; */
     height: 30px;
     i
 
@@ -127,32 +130,25 @@ i:nth-child(2) {
     background-color: transparent;
     border: none;
     i
+    {
+        font-size: 16px;
+    }
 
-{
-    font-size: 16px;
 }
 
-}
 
 /*hero styling*/
+
+
 .hero {
-    position: relative;
-}
-
-.hero-image {
-    img
-
-{
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     width: 100vw;
     margin-left: calc(50% - 50vw);
-    height: auto;
-    position: absolute;
-    right: 0;
+    height: 552px;
 }
 
-}
 
 .hero-content {
     display: flex;
@@ -196,4 +192,142 @@ i:nth-child(2) {
     display: grid;
     place-content: center;
     text-decoration: none;
+}
+
+
+/*About Style*/
+
+.about {
+    margin-top: 3rem;
+    display: flex;
+    position: relative;
+    margin-bottom: 5rem;
+}
+
+.about-text {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.about-header {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-us {
+    font-size: 16px;
+    font-weight: var(--font-bold);
+    font-family: var(--font-family);
+    color: var(--sub-color-3);
+}
+
+.about-title {
+    font-size: 40px;
+    font-weight: var(--font-bold);
+    font-family: var(--font-family);
+    color: var(--text-color);
+}
+
+.about-description {
+    font-size: 20px;
+    font-weight: var(--font-light);
+    font-family: var(--font-family);
+    font-style: italic;
+    color: var(--text-color);
+    line-height: 1.5;
+    color: var(--text-color);
+}
+
+.about-text-content {
+    font-size: 14px;
+    font-weight: var(--font-normal);
+    font-family: var(--font-family);
+    color: var(--text-color);
+}
+
+.signature {
+    width: 160px;
+}
+/* request callback card styles */
+.callback-card {
+    width: 470px;
+    height: 572px;
+    box-shadow: 2px 4px 20px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #fff;
+}
+
+.callback-title {
+    background-color: var(--primary-color);
+    width: 100%;
+    height: auto;
+    padding: 1.5rem;
+}
+
+    .callback-title h3 {
+        font-size: 30px;
+        font-weight: var(--font-bold);
+        font-family: var(--font-family);
+        color: var(--sub-color-1);
+    }
+
+.callback-text {
+    font-size: 13px;
+    font-weight: var(--font-normal);
+    font-family: var(--font-family);
+    font-style: italic;
+    color: var(--text-color);
+}
+
+.callback-form {
+    padding: 1.5rem;
+}
+
+    .callback-form form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1rem;
+        input
+
+{
+    width: 100%;
+    height: 50px;
+    border: 1px solid #c4c4c4;
+    border-radius: 4px;
+    padding: 0 10px;
+    font-size: 14px;
+    font-family: var(--font-family);
+    font-weight: var(--font-normal);
+    color: var(--text-color);
+}
+
+select {
+    width: 100%;
+    height: 50px;
+    border: 1px solid #c4c4c4;
+    border-radius: 4px;
+    padding: 0 10px;
+    font-size: 14px;
+    font-family: var(--font-family);
+    font-weight: var(--font-normal);
+    color: var(--text-color);
+}
+
+button {
+    width: 100%;
+    height: 50px;
+    background-color: var(--sub-color-1);
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: var(--font-family);
+    font-weight: var(--font-bold);
+    color: var(--primary-color);
+    cursor: pointer;
+}
 }
