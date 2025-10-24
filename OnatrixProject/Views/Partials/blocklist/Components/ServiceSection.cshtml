@@ -3,4 +3,23 @@
 @{
     var content = (ContentModels.ServiceSection)Model.Content;
     var settings = Model.Settings as ContentModels.ServiceSettings;
+
 }
+<section class="services">
+    <div class="container">
+        <div class="services-title">
+            <h2>Our Services</h2>
+            <p>
+                We Provide The Solutions <br />
+                To Grow Your Business Faster
+            </p>
+        </div>
+        <div class="services-cards">
+            @foreach(var card in content.ServiceCardList)
+            {
+            <partial name="Partials/blocklist/Components/ServiceCardItem" model="card"/>
+                
+            }
+        </div>
+    </div>
+</section>
