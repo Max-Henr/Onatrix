@@ -444,3 +444,112 @@ p {
     text-decoration: none;
     text-align: center;
 }
+
+
+/* Story Styles */
+
+
+.story {
+    background-color: var(--primary-color);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    margin-bottom: 16rem;
+}
+
+.story-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    img
+
+{
+    position: absolute;
+    top: 60%;
+}
+
+}
+
+.story-header {
+    text-align: center;
+    font-weight: var(--font-bold);
+    font-family: var(--font-family);
+    margin-top: 5rem;
+    h2{
+        font-size: 14px;
+        color: var(--sub-color-1);
+      }
+
+    h3 {
+        font-size: 40px;
+        color: #fff;
+    }
+
+}
+
+.story-content {
+    font-family: var(--font-family);
+    font-weight: var(--font-semi-bold);
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 26rem;
+    span{
+        color: var(--sub-color-3);
+        font-size: 100px;
+}
+
+    p {
+        color: #fff;
+        font-size: 18px;
+        text-align: center;
+    }
+
+}
+
+.story-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 370px;
+}
+
+
+/* Partner Style */
+
+
+.companies {
+    margin-bottom: 5rem;
+}
+
+.companies-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+
+.companies-li {
+    list-style: none;
+}
+
+
+/* Footer Style */
+
+
+.footer {
+    background-color: var(--footer-bg-color);
+}
+
+.footer-content {
+    font-family: var(--font-family);
+    font-weight: var(--font-normal);
+    color: var(--text-color);
+    p{
+        font-size: 14px;    
+     }
+
+}

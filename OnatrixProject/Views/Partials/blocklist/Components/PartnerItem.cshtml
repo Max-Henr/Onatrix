@@ -1,0 +1,8 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    var content = (ContentModels.PartnerItem)Model.Content;
+
+}
+
+<li class="companies-li"><img src="@content.PartnerLogo.Url()" alt="@content.PartnerTitle" /></li>

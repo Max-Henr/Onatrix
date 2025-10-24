@@ -5,3 +5,13 @@
 
 }
 
+<section class="companies">
+    <div class="container">
+        <ul class="companies-flex">
+            @foreach(var logo in content.PartnerLogoList)
+            {
+                <partial name="Partials/blocklist/Components/PartnerItem" model="logo" />
+            }
+        </ul>
+    </div>
+</section>

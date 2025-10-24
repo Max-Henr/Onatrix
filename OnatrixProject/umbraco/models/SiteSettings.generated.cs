@@ -74,6 +74,14 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public virtual string ContactPhone => this.Value<string>(_publishedValueFallback, "contactPhone");
 
 		///<summary>
+		/// copyright Text
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.2.0+4eae48e")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("copyrightText")]
+		public virtual global::Umbraco.Cms.Core.Strings.IHtmlEncodedString CopyrightText => this.Value<global::Umbraco.Cms.Core.Strings.IHtmlEncodedString>(_publishedValueFallback, "copyrightText");
+
+		///<summary>
 		/// Site Logo
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.2.0+4eae48e")]

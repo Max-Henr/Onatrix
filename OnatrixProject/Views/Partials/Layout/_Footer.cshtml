@@ -1,0 +1,13 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+    var rootContent = Umbraco.ContentAtRoot();
+    var siteSettings = rootContent.OfType<SiteSettings>().FirstOrDefault();
+
+    var copyright = siteSettings.CopyrightText;
+}
+<section class="footer">
+    <div class="footer-content container">
+        @Html.Raw(copyright)
+    </div>
+</section>
