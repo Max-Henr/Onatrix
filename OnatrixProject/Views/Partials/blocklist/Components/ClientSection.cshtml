@@ -3,3 +3,15 @@
 @{
     var content = (ContentModels.ClientSection)Model.Content;
 }
+<section class="clients" style="background-image: url(@content.ClientBgImage.Url());">
+    <div class="clients-flex container">
+        <div class="clients-title">
+            @Html.Raw(content.ClientTitle)
+        </div>
+        <div class="clients-text">
+            @Html.Raw(content.ClientText)
+        </div>
+        <a class="story-btn" href="@content.ClientLink.Url">@content.ClientLink.Name</a>
+        <img src="@content.ClientImage.Url()" alt="" />
+    </div>
+</section>
