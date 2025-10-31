@@ -1,0 +1,43 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    var content = (ContentModels.AboutSection)Model.Content;
+}
+
+<section class="about container" id="about">
+    <div class="about-content">
+        <div class="about-text">
+            <div class="about-header">
+                <h2 class="about-us">@content.AboutLabel</h2>
+                <h3 class="about-title">@content.AboutTitle</h3>
+            </div>
+
+            @Html.Raw(content.AboutText)
+
+            <img class="signature"
+                 src="@content.AboutSignatureImage.Url()"
+                 alt="" />
+            <span>@content.AboutSignature</span>
+        </div>
+    </div>
+    <div class="callback-card">
+        <div class="callback-title">
+            <h3>Request a call back</h3>
+        </div>
+        <div class="callback-form">
+            <span class="callback-text">
+                Dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur excepteur sint occaecat
+            </span>
+            <form action="">
+                <input type="text" placeholder="Your Name" />
+                <input type="email" placeholder="Your Email" />
+                <input type="tel" placeholder="Phone Number" />
+                <select>
+                    <option value="">Financial consulting</option>
+                </select>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+</section>

@@ -1,5 +1,28 @@
-﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@using Umbraco.Cms.Web.Common.PublishedModels;
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
 @{
 	Layout = null;
 }
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="~/css/style.css" />
+	<script src="https://kit.fontawesome.com/373619c028.js"
+			crossorigin="anonymous"></script>
+
+</head>
+<body>
+	<header class="header">
+		<partial name="Partials/Layout/_TopBanner" />
+		<partial name="Partials/Layout/_Header" />	
+	</header>
+	@RenderBody()
+	<footer>
+		<partial name="Partials/Layout/_Footer" />
+	</footer>
+</body>
+</html>
+

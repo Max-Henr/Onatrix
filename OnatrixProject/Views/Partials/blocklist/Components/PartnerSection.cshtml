@@ -1,0 +1,17 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    var content = (ContentModels.PartnerSection)Model.Content;
+
+}
+
+<section class="companies">
+    <div class="container">
+        <ul class="companies-flex">
+            @foreach(var logo in content.PartnerLogoList)
+            {
+                <partial name="Partials/blocklist/Components/PartnerItem" model="logo" />
+            }
+        </ul>
+    </div>
+</section>
