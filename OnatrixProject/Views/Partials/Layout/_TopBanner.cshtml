@@ -1,0 +1,22 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+    var rootContent = Umbraco.ContentAtRoot();
+    var siteSettings = rootContent.OfType<SiteSettings>().FirstOrDefault();
+
+    var contactAddress = siteSettings.ContactAddress;
+    var platformLink = siteSettings.SocialMediaList;
+
+}
+
+<div class="top-banner">
+    <div class="top-banner-flex container">
+        <p>@contactAddress</p>
+        <div class="icons">
+            <a href=""></a>
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-linkedin-in"></i>
+        </div>
+    </div>
+</div>
