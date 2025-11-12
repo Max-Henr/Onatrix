@@ -8,8 +8,8 @@
 <section class="story" style="background-image: url(@content.StoryBgImage.Url());">
     <div class="story-flex container">
         <div class="story-header">
-            <h2>@content.StoryLabel</h2>
-            <h3>@content.StoryTitle</h3>
+            <span class="label">@content.StoryLabel</span>
+            <h2>@content.StoryTitle</h2>
         </div>
         <div class="story-content">
             @foreach(var item in content.SuccessStoryInfo)
