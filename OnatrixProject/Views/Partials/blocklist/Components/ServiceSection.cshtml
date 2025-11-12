@@ -8,7 +8,7 @@
     var siteRoot = current.Root();
 
     var servicePage = siteRoot.Children<ServicesPage>().FirstOrDefault();
-    var items = servicePage.Children<ServiceDetail>().OrderByDescending(o => o.CreateDate).ToList();
+    var items = servicePage.Children<ServiceDetail>().OrderByDescending(o => o.UpdateDate).ToList();
 
 }
 <section class="services" style="background-color: @settings.ServiceBgColor;">
@@ -16,7 +16,7 @@
         <div class="services-title">
             @if (settings.ShowServiceLabel)
             {              
-                <h2>@content.ServiceLabel</h2>
+                <span class="label">@content.ServiceLabel</span>
             }
                 @Html.Raw(content.ServiceTitle)
         </div>
@@ -24,13 +24,15 @@
             @foreach(var item in items)
             {
                 <div class="service-card">
-                    <div class="service-card-title">
-                        <h3>@item.Name</h3>
-                    </div>
-                    <img src="@item.ServiceDetailImage.Url()" alt="" />
-                    <div class="service-card-text">
-                        @Html.Raw(item.ServiceDetailText)
-                    </div>
+                    <a href="@item.Url()">
+                        <div class="service-card-title">
+                            <h5>@item.Name</h5>
+                        </div>
+                        <img src="@item.ServiceDetailImage.Url()" alt="" />
+                        <div class="service-card-text">
+                            @Html.Raw(item.ServiceDetailText)
+                        </div>
+                    </a>
                 </div>
             }
         </div>

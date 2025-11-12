@@ -1,5 +1,45 @@
 ﻿@using Umbraco.Cms.Web.Common.PublishedModels;
-@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ServiceDetail>;
 @{
-	Layout = null;
+	Layout = "mainLayout.cshtml";
 }
+<partial name="Partials/Layout/_Breadcrumb" />
+
+<section>
+	<div class="container ">
+        <div class="service-detail-flex">
+            <div class="aside-box">
+               @Html.GetBlockListHtml(Model.ServiceDetailAsides)
+                <div class="mail-box">
+                    <h5>How can we help you?</h5>
+                    <p>online support 24/7, we are here to help you</p>
+                    <form class="form-input">
+                        <label for="E-Mail"></label>
+                        <input class="email-box-input"
+                               type="text"
+                               id="name"
+                               name="name"
+                               placeholder="E-mail address" />
+                        <i class="fa-regular fa-envelope input-box"></i>
+                    </form>
+                    <i class="fa-regular fa-envelope envelope-bg"></i>
+                </div>
+            </div>
+            <div class="aside-grayline"></div>
+            <div class="rte-text">
+                @Html.Raw(Model.ServiceBodyText)
+            </div>
+        </div>
+
+        <form class="service-form">
+            <h4>Have a question ?</h4>
+            <div class="service-form-contact">
+                <input type="text" name="Name" placeholder="Name" />
+                <input type="text" name="Email" placeholder="Email" />
+            </div>
+            <textarea placeholder="Question" style="resize: none"></textarea>
+            <button type="submit" class="contact-btn">Submit</button>
+        </form>
+	</div>
+</section>
+@Html.GetBlockListHtml(Model.ServiceDetailAddSection)
